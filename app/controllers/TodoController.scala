@@ -34,6 +34,14 @@ object TodoController extends Controller {
     }
   }
 
+  def deleteTodo(id: String) = Action.async {
+    TodoDao.deleteTodo(id)
+        .map(result => Ok)
+        .recover(convertException)
+  }
+
+  
+
   val convertException: PartialFunction[Throwable, Result] = {
     case t: TimeoutException => InternalServerError(t.getMessage)
     case u                   => InternalServerError("Unknown server exception:" + u.getMessage)

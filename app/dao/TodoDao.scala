@@ -42,4 +42,15 @@ object TodoDao {
       }
   }
 
+  def deleteTodo(id: String) = {
+    val selector = BSONDocument("_id" -> BSONObjectID(id))
+
+    collection.remove(selector).map { result =>
+        "OK"
+    }.recover {
+      case t: Throwable => throw t
+    }
+
+  }
+
 }

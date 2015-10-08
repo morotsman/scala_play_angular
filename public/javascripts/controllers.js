@@ -29,9 +29,13 @@ define([ 'angular' ], function() {
 				$scope.remove = function() {
 					var oldList = $scope.todoList;
 					$scope.todoList = [];
-					angular.forEach(oldList, function(x) {
-						if (!x.done)
-							$scope.todoList.push(x);
+					angular.forEach(oldList, function(todo) {
+						if (!todo.done){
+                                                    $scope.todoList.push(todo);
+                                                }else{
+                                                    todoDao.deleteTodo(todo);
+                                                }
+							
 					});
 				};
 			} ]);

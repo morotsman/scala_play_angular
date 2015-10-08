@@ -14,7 +14,10 @@ define([ 'angular' ], function(angular) {
 			},
 			addTodo: function(todo){
 				return $http.post("todos", todo);
-			}
+			},
+                        deleteTodo: function(todo){
+                            return $http.delete("todos/" + todo.id);
+                        }
 
 		};
 	} ]);
