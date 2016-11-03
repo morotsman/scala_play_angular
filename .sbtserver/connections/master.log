@@ -1,0 +1,10 @@
+New log file opened at Thu Nov 03 09:55:57 CET 2016 by 1422@Niklass-Mac-mini.local
+Taking next connection to: 50123
+New client attempting to connect on port: 50124-50123
+  Address = /192.168.1.8:50123
+This client on port 50124 has uuid cdab533f-2875-4b52-b0c6-7e3fa8b2cb09 configName activator humanReadableName Activator protocolVersion 3 featureTags Vector()
+Connected Clients: activator-cdab533f-2875-4b52-b0c6-7e3fa8b2cb09
+Taking next connection to: 50123
+Checking to see if clients are empty...
+We have 1 non-daemon clients, continuing serving connections.
+Taking next connection to: 50123

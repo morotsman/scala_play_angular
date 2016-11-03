@@ -23,3 +23,6 @@ libraryDependencies ++= Seq(
 pipelineStages := Seq(rjs, digest, gzip)
 
 
+
+
+fork in run := true
